@@ -1,41 +1,32 @@
-import React, { useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { useDispatch, useSelector } from "react-redux";
-import Typography from "@material-ui/core/Typography";
+import React from "react";
 
+import { createTheme, ThemeProvider } from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
 
-const useStyles = makeStyles((theme) => ({
-  root: { flexGrow: 1 },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
+import AppHeader from "./components/header/headerComponent";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#2A9D8F",
+    },
+    secondary: {
+      main: "#FFFFFF",
+    },
   },
-  header: {
-    padding: theme.spacing(2),
-    fontWeight: "Bold",
-    textAlign: "center",
-    color: "whitesmoke",
-    background: "#3f51b5",
-  },
-  loading: {
-    marginLeft: "50vw",
-    marginTop: "50vh",
-  },
-}));
+  typography: {},
+});
+
 function App() {
-  const classes = useStyles();
-
- // const compressDataSelector = useSelector((state) => state.compressReducer);
- const dispatcher = useDispatch();
-
- 
-  useEffect(() => {
-    // Fetch Data
-   // dispatcher(loadInitData());
-  }, []);
-
-  return( <div><Typography>Welcome To Yaniv Suriyano Start Project With React, Redux, NodeJs</Typography></div>)
+  return (
+    <ThemeProvider theme={theme}>
+      <Grid container justifyContent="center" alignItems="center">
+        <Grid item sm={9}>
+          <AppHeader />
+        </Grid>
+      </Grid>
+    </ThemeProvider>
+  );
 }
 
 export default App;

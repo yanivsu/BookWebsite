@@ -14,4 +14,3 @@ export function loadInitData() {
       .catch((error) => console.log("loadData Error no data", error.message));
   };
 }
-

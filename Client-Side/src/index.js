@@ -4,6 +4,7 @@ import { Provider as ReduxProvider } from "react-redux";
 import configureStore from "./store/confingStore";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "./index.css";
 const store = configureStore();
 ReactDOM.render(
   <ReduxProvider store={store}>
