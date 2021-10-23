@@ -28,7 +28,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Grid container justifyContent="center" alignItems="center">
-        <Grid sm={9} xs={12}>
+        <Grid xl={7} md={10} xs={12}>
           <AppHeader />
         </Grid>
       </Grid>
@@ -38,7 +38,7 @@ function App() {
         alignItems="center"
         style={{ marginTop: "3%" }}
       >
-        <Grid sm={9}>
+        <Grid xl={7} md={10} xs={12}>
           <About />
         </Grid>
       </Grid>
