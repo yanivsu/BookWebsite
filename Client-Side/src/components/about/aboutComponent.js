@@ -10,7 +10,7 @@ import { Grid } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 import Fade from "@material-ui/core/Fade";
 
-import bookPicture from "../../styles/bookPicture.png";
+import frontBookImg from "../../styles/frontBookImg.jpg";
 import cloudsBackground from "../../styles/cloudsBackground.svg";
 import * as enums from "../../helpers/enums";
 
@@ -58,7 +58,7 @@ export default function About() {
             <CardMedia
               component="img"
               className={classes.media}
-              image={bookPicture}
+              image={frontBookImg}
               title={enums.buttonsText.BOOKPAGE}
             />
           </Grid>
@@ -70,10 +70,17 @@ export default function About() {
           <Grid container sm={6} direction="row">
             <Grid item>
               <CardContent>
-                <Typography variant="h3">
+                <Typography variant="h3" style={{ textAlign: "center" }}>
                   {enums.aboutComponentsTexts.TITLE}
                 </Typography>
-                <Typography variant="h5" color="textSecondary">
+
+                <Typography
+                  color="textSecondary"
+                  paragraph
+                  variant="h5"
+                  style={{ whiteSpace: "pre-line", textAlign: "center" }}
+                >
+                  <br />
                   {enums.aboutComponentsTexts.PARAGRAPH}
                 </Typography>
               </CardContent>

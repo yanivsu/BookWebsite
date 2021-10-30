@@ -7,7 +7,7 @@ import { Grid } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 import Fade from "@material-ui/core/Fade";
 
-import profilePicture from "../../styles/profilePicture.jpg";
+import profilePicture from "../../styles/NoaProfilePicture.jpg";
 import cloudsBackground from "../../styles/cloudsBackground2.svg";
 import * as enums from "../../helpers/enums";
 
@@ -20,16 +20,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   media: {
-    margin: theme.spacing(2),
+    margin: theme.spacing(2, 0, 2, 2),
     width: "100%",
     height: "100%",
     backgroundSize: "cover",
-  },
-
-  button: {
-    width: "100%",
-    height: "80px",
-    marginTop: theme.spacing(8),
   },
 
   divider: {
@@ -39,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ArtInfo() {
+export default function ArtInfo2() {
   const classes = useStyles();
   return (
     <Fade in={true} timeout={1500}>
@@ -48,33 +42,33 @@ export default function ArtInfo() {
           container
           direction="row"
           sm={12}
-          justifyContent="space-between"
+          justifyContent="space-around"
           alignItems="center"
         >
-          <Grid item sm={5}>
-            <CardMedia
-              component="img"
-              className={classes.media}
-              image={profilePicture}
-              title={enums.buttonsText.BOOKPAGE}
-            />
+          <Grid item sm={6}>
+            <Grid item>
+              <CardContent>
+                <Typography variant="h3">
+                  <Box letterSpacing={5}>{enums.artInfoTexts.NOA}</Box>
+                </Typography>
+                <Typography variant="h5" color="textSecondary">
+                  {enums.artInfoTexts.ABOUT_NOA}
+                </Typography>
+              </CardContent>
+            </Grid>
           </Grid>
           <Divider
             orientation="vertical"
             flexItem
             className={classes.divider}
           />
-          <Grid container sm={6} direction="row">
-            <Grid item>
-              <CardContent>
-                <Typography variant="h3">
-                  <Box letterSpacing={5}>{enums.artInfoTexts.LINOY}</Box>
-                </Typography>
-                <Typography variant="h5" color="textSecondary">
-                  {enums.artInfoTexts.ABOUT_LINOY}
-                </Typography>
-              </CardContent>
-            </Grid>
+          <Grid container sm={5}>
+            <CardMedia
+              component="img"
+              className={classes.media}
+              image={profilePicture}
+              title={enums.buttonsText.PROFILEPICTURE}
+            />
           </Grid>
         </Grid>
       </Card>

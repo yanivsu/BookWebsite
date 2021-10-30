@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import AppHeader from "./components/header/headerComponent";
 import About from "./components/about/aboutComponent";
 import ArtInfo from "./components/art/artInfoComponent";
+import Art2Info from "./components/art/artInfo2Componenet";
 
 const theme = createTheme({
   palette: {
@@ -52,6 +53,16 @@ function App() {
       >
         <Grid xl={7} md={10} xs={12}>
           <ArtInfo />
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        style={{ marginTop: "3%" }}
+      >
+        <Grid xl={7} md={10} xs={12}>
+          <Art2Info />
         </Grid>
       </Grid>
     </ThemeProvider>
