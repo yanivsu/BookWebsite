@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     width: "100%",
     height: "80px",
-    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
   },
 
   divider: {
@@ -80,12 +80,11 @@ export default function About() {
                   variant="h5"
                   style={{ whiteSpace: "pre-line", textAlign: "center" }}
                 >
-                  <br />
                   {enums.aboutComponentsTexts.PARAGRAPH}
                 </Typography>
               </CardContent>
             </Grid>
-            <Grid container justifyContent="center" alignItems="flex-end">
+            <Grid container justifyContent="center" alignItems="center">
               <Box>
                 <Button
                   className={classes.button}
