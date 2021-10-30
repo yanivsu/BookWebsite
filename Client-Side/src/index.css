@@ -8,6 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   direction: rtl;
+  background-image: url("./styles/backgroundWebSite.png");
 }
 
 code {

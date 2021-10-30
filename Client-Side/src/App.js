@@ -44,7 +44,6 @@ function App() {
           <About />
         </Grid>
       </Grid>
-
       <Grid
         container
         justifyContent="center"
