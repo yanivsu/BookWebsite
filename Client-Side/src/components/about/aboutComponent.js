@@ -7,15 +7,16 @@ import { Box } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import { Grid } from "@material-ui/core";
+import Divider from "@material-ui/core/Divider";
+import Fade from "@material-ui/core/Fade";
 
-import bookPicture from "../../styles/bookPicture.png";
-import backGroundCard from "../../styles/backGroundCard.png";
-import test1 from "../../styles/2.svg";
-import backgroundSvgTest from "../../styles/backgroundSvgTest.svg";
+import frontBookImg from "../../styles/frontBookImg.jpg";
+import cloudsBackground from "../../styles/cloudsBackground.svg";
+import * as enums from "../../helpers/enums";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundImage: `url(${test1})`,
+    backgroundImage: `url(${cloudsBackground})`,
     backgroundSize: "cover",
     backgroundPosition: "1px",
     backgroundRepeat: "no-repeat",
@@ -31,63 +32,78 @@ const useStyles = makeStyles((theme) => ({
   button: {
     width: "100%",
     height: "80px",
-    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
   },
 
-  content: {},
+  divider: {
+    margin: theme.spacing(5, 0, 5),
+    width: "5px",
+    backgroundColor: "primary",
+  },
 }));
 
 export default function About() {
   const classes = useStyles();
-  const theme = useTheme();
-
   return (
-    <Card className={classes.root}>
-      <Grid
-        container
-        direction="row"
-        sm={12}
-        justifyContent="space-between"
-        alignItems="center"
-      >
-        <Grid item sm={5}>
-          <CardMedia
-            component="img"
-            className={classes.media}
-            image={bookPicture}
-            title="Book Picture"
+    <Fade in={true} timeout={1500}>
+      <Card className={classes.root}>
+        <Grid
+          container
+          direction="row"
+          sm={12}
+          justifyContent="space-between"
+          alignItems="center"
+        >
+          <Grid item sm={5}>
+            <CardMedia
+              component="img"
+              className={classes.media}
+              image={frontBookImg}
+              title={enums.buttonsText.BOOKPAGE}
+            />
+          </Grid>
+          <Divider
+            orientation="vertical"
+            flexItem
+            className={classes.divider}
           />
-        </Grid>
-        <Grid container sm={6} direction="row">
-          <Grid item>
-            <CardContent>
-              <Typography variant="h3">
-                אז הגיע הלילה של כוכב השביט הראשון
-              </Typography>
-              <Typography variant="h5" color="textSecondary">
-                פד גם הוא להאצ'ינס. "אני בהלם", כתב בטוויטר, "היה לי המזל לעבוד
-                עם האלינה על סרט. היא הייתה אדם נפלא וכישרון ענק. אני לא מאמין
-                שדבר כזה יכול לקרות בעידן הנוכחי... כדור מאקדח שהוא אביזר על
-                הסט? איזו טרגדיה נוראה. ליבי יוצא למשפחתה". התסריטאית נל סקובל
-                צייצה: "רק 5% מהצלמים הראשיים בהוליווד הן נשים, וזה מעיד על
-                הכישרון וה
-              </Typography>
-            </CardContent>
+          <Grid container sm={6} direction="row">
+            <Grid item>
+              <CardContent>
+                <Typography variant="h3" style={{ textAlign: "center" }}>
+                  {enums.aboutComponentsTexts.TITLE}
+                </Typography>
+
+                <Typography
+                  color="textSecondary"
+                  paragraph
+                  variant="h5"
+                  style={{ whiteSpace: "pre-line", textAlign: "center" }}
+                >
+                  {enums.aboutComponentsTexts.PARAGRAPH}
+                </Typography>
+              </CardContent>
+            </Grid>
+            <Grid container justifyContent="center" alignItems="center">
+              <Box>
+                <Button
+                  className={classes.button}
+                  color="primary"
+                  variant="contained"
+                  title={enums.buttonsText.BUY}
+                >
+                  <ShoppingCartOutlinedIcon
+                    titleAccess={enums.buttonsText.BUY}
+                  />
+                  <Typography variant="h4" titleAccess={enums.buttonsText.BUY}>
+                    {enums.buttonsText.BUY}
+                  </Typography>
+                </Button>
+              </Box>
+            </Grid>
           </Grid>
-          <Grid container justifyContent="center" alignItems="flex-end">
-            <Box>
-              <Button
-                className={classes.button}
-                color="primary"
-                variant="contained"
-              >
-                <ShoppingCartOutlinedIcon fontSize="large" aria-label="Buy" />
-                <Typography variant="h4">לרכישה</Typography>
-              </Button>
-            </Box>
-          </Grid>
         </Grid>
-      </Grid>
-    </Card>
+      </Card>
+    </Fade>
   );
 }
