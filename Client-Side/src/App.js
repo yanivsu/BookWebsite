@@ -1,5 +1,5 @@
 import React from "react";
-
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -12,6 +12,8 @@ import * as enums from "./helpers/enums";
 
 import linoysProfilePicture from "./styles/profilePicture.jpg";
 import noasProfilePicture from "./styles/NoaProfilePicture.jpg";
+import MainPage from "./components/MainPage/mainPageComponent";
+import Creation from "./components/creation/creationComponent";
 
 const theme = createTheme({
   palette: {
@@ -49,36 +51,20 @@ const useStyles = makeStyles((theme) => ({}));
 
 function App() {
   const classes = useStyles();
+
   return (
     <ThemeProvider theme={theme}>
-      <Grid container justifyContent="center" alignItems="center">
-        <Grid xl={7} md={10} xs={12}>
-          <AppHeader />
+      <Router>
+        <Grid container justifyContent="center" alignItems="center">
+          <Grid xl={7} md={10} xs={12}>
+            <AppHeader />
+          </Grid>
         </Grid>
-      </Grid>
-
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        style={{ marginTop: "3%" }}
-      >
-        <Grid xl={7} md={10} xs={12}>
-          <About />
-        </Grid>
-      </Grid>
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        style={{ marginTop: "3%" }}
-      >
-        <Grid xl={7} md={10} xs={12}>
-          {data.map((person) => {
-            return <ArtInfo data={person} />;
-          })}
-        </Grid>
-      </Grid>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/Creation" element={<Creation />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   );
 }

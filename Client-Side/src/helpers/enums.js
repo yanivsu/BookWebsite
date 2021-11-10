@@ -1,6 +1,6 @@
 export const buttonsText = {
   BUY: "לרכישה",
-  ART: "יצירה",
+  CREATION: "יצירה",
   ABOUT: "אודות",
   GALLARY: "גלריה",
   BOOKPAGE: "תמונת הספר",
