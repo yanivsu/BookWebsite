@@ -20,3 +20,12 @@ export const artInfoTexts = {
   NOA: "נועה מושיוב",
   ABOUT_NOA: `אוהבת ללכת לשון מוקדם, לטייל בטבע, לצייר וללמוד. גם היא אוהבת ממתקים, כלבים, הרפתקאות ומתמטיקה.`,
 };
+
+export const paintPapersLinks = [
+  "https://lh6.googleusercontent.com/utEJ0r9jJiqPjT5m4EANbwFfq36Bz0A7plu_1KoSpn1fAiDaygt3-K0Fay4qFgEJWtk1S_IHoryXEdlH6kodmn81vZi6km0_pq7bZQ7MavBmoifcVMznpSZauIpxKX8IwsEBWutM",
+  "https://lh4.googleusercontent.com/rWgXfOiDL8Dr6L7HZ2YyAa0wl7Av3uCbor97RN3iuBpNHJu3hQ4I9XKEC9pioVjID2XXrdtgfVNP5Q6CRs1o-0NAByaXQX39Waga0D6J5Ovbo_6sRCWFi3aTcLUr5IZubo0r6EFV",
+  "https://lh4.googleusercontent.com/WABccsTQBBwuqLnUxVh_IB2ja2AIuE9uHXxax9S4wOlPeP5usybO7M4apkhbE6Nels8N-pY7uUXCCoeE36PqgAteoBkEnYht5466lP7iMsKR9pw_Nl9z9pby6VwoUwwCeIrQG2tK",
+  "https://lh6.googleusercontent.com/g5gKQqkAzY5Xja50_MMyWW2Ojn0Z7fMb0e8-WEFcimoLs-cGxpPqIdKuV0bRoWT7EWkAkuOduYh9164yzS_sMl3F3KI6jCGZ4PAhthmrlVho1-wgh98VlNNSYKbWScmvIluSR3cu",
+  "https://lh4.googleusercontent.com/Y8lrDOYH_LNbtOHSVaryWx_Lnbm_6RtBZ6of3cQfukLTjlOZ2nhtY6ZwlTenepogotJZk445myXJTNGXt1xMv6Tdxd1eJYfLErYd9GBkQOwxvQ9iC3EIkRLITqXVfCe9pHARPpJT",
+  "https://lh4.googleusercontent.com/xoj_0i50iTXCC9-jezL_Zb3O7vqFpYB4WSmZjaCFLs2e7ZB6dwrF24SIk8bhNDp5Q7ZNGEL80UiLwiXihJ0Fiot9AJFYXKkxL8BKuq0GFPvFbf5XkzeEbXQeNjM9CkcsdLj85dvC",
+];
