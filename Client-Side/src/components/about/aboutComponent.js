@@ -91,6 +91,9 @@ export default function About() {
                   color="primary"
                   variant="contained"
                   title={enums.buttonsText.BUY}
+                  onClick={() => {
+                    window.open(enums.buttonsText.BUY_LINK, "_blank"); //to open new page
+                  }}
                 >
                   <ShoppingCartOutlinedIcon
                     titleAccess={enums.buttonsText.BUY}

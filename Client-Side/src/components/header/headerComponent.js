@@ -56,16 +56,30 @@ export default function AppHeader() {
                 {enums.buttonsText.CREATION}
               </Button>
             </Link>
-            <Button className={classes.button} color="secondary">
-              {enums.buttonsText.GALLARY}
-            </Button>
-            <img className={classes.logo} src={headerIcon} alt="fireSpot" />
-            <Button className={classes.button} color="secondary">
-              {enums.buttonsText.ABOUT}
-            </Button>
-            <Button className={classes.button} color="secondary">
-              {enums.buttonsText.BUY}
-            </Button>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Button className={classes.button} color="secondary">
+                {enums.buttonsText.GALLARY}
+              </Button>
+            </Link>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <img className={classes.logo} src={headerIcon} alt="fireSpot" />
+            </Link>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Button className={classes.button} color="secondary">
+                {enums.buttonsText.ABOUT}
+              </Button>
+            </Link>
+            <Link>
+              <Button
+                onClick={() => {
+                  window.open(enums.buttonsText.BUY_LINK, "_blank"); //to open new page
+                }}
+                className={classes.button}
+                color="secondary"
+              >
+                {enums.buttonsText.BUY}
+              </Button>
+            </Link>
           </Grid>
         </Toolbar>
       </AppBar>

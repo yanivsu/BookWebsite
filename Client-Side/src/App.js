@@ -29,29 +29,7 @@ const theme = createTheme({
   },
 });
 
-const linoysData = {
-  name: enums.artInfoTexts.LINOY,
-  about: enums.artInfoTexts.ABOUT_LINOY,
-  profilePicture: linoysProfilePicture,
-  backgroundPicture: "../../styles/cloudsBackground2.svg",
-  rightSide: true,
-};
-
-const noasData = {
-  name: enums.artInfoTexts.NOA,
-  about: enums.artInfoTexts.ABOUT_NOA,
-  profilePicture: noasProfilePicture,
-  backgroundPicture: "../../styles/cloudsBackground2.svg",
-  rightSide: false,
-};
-
-const data = [linoysData, noasData];
-
-const useStyles = makeStyles((theme) => ({}));
-
 function App() {
-  const classes = useStyles();
-
   return (
     <ThemeProvider theme={theme}>
       <Router>

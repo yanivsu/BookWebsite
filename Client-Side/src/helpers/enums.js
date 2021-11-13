@@ -5,6 +5,8 @@ export const buttonsText = {
   GALLARY: "גלריה",
   BOOKPAGE: "תמונת הספר",
   PROFILEPICTURE: "תמונת פרופיל",
+  BUY_LINK:
+    "https://www.meshulam.co.il/purchase?b=25b22fc8b8fc81a9741b428fb65d7c6f",
 };
 
 export const aboutComponentsTexts = {
