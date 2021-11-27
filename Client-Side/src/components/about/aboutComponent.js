@@ -11,7 +11,8 @@ import Divider from "@material-ui/core/Divider";
 import Fade from "@material-ui/core/Fade";
 
 import frontBookImg from "../../styles/frontBookImg.jpg";
-import cloudsBackground from "../../styles/cloudsBackground.svg";
+import cloudsBackground from "../../styles/frame5.svg";
+// import cloudsBackground from "../../styles/cloudsBackground.svg";
 import * as enums from "../../helpers/enums";
 
 const useStyles = makeStyles((theme) => ({
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   media: {
-    margin: theme.spacing(2),
+    margin: theme.spacing(2, 5, 2, 2),
     width: "100%",
     height: "100%",
     backgroundSize: "cover",
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     margin: theme.spacing(5, 0, 5),
     width: "5px",
-    backgroundColor: "primary",
+    backgroundColor: "#ac1917",
   },
 }));
 

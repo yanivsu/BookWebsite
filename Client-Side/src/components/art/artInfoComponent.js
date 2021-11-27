@@ -7,16 +7,24 @@ import { Grid } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 import Fade from "@material-ui/core/Fade";
 
-import cloudsBackground from "../../styles/cloudsBackground2.svg";
+import cloudsBackground from "../../styles/zooframe.svg";
+import borderBackground from "../../styles/border.png";
 import * as enums from "../../helpers/enums";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundImage: `url(${cloudsBackground})`,
-    backgroundSize: "cover",
-    backgroundPosition: "1px",
-    backgroundRepeat: "no-repeat",
-    marginBottom: "3%",
+    // backgroundImage: `url(${cloudsBackground})`,
+    // backgroundSize: "cover",
+    // backgroundPosition: "1px",
+    // backgroundRepeat: "no-repeat",
+    // marginBottom: "3%",
+
+    backgroundColor: "rgba(245,245,245,0.3)",
+    background: "none",
+    border: "30px solid transparent",
+    borderImageSource: `url(${borderBackground})`,
+    borderImageRepeat: "round",
+    borderImageSlice: 30,
   },
 
   mediaRight: {

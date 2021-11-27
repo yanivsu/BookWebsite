@@ -1,3 +1,8 @@
+import Pic1 from "../styles/bookPictures/BookInfo1.jpg";
+import Pic2 from "../styles/bookPictures/BookInfo2.png";
+import Pic3 from "../styles/bookPictures/BookInfo3.jpg";
+import Pic4 from "../styles/bookPictures/BookInfo4.png";
+
 export const buttonsText = {
   BUY: "לרכישה",
   CREATION: "יצירה",
@@ -31,3 +36,7 @@ export const paintPapersLinks = [
   "https://lh4.googleusercontent.com/Y8lrDOYH_LNbtOHSVaryWx_Lnbm_6RtBZ6of3cQfukLTjlOZ2nhtY6ZwlTenepogotJZk445myXJTNGXt1xMv6Tdxd1eJYfLErYd9GBkQOwxvQ9iC3EIkRLITqXVfCe9pHARPpJT",
   "https://lh4.googleusercontent.com/xoj_0i50iTXCC9-jezL_Zb3O7vqFpYB4WSmZjaCFLs2e7ZB6dwrF24SIk8bhNDp5Q7ZNGEL80UiLwiXihJ0Fiot9AJFYXKkxL8BKuq0GFPvFbf5XkzeEbXQeNjM9CkcsdLj85dvC",
 ];
+
+export const bookPictursLinks = [Pic1, Pic2, Pic3, Pic4];
+
+export const bookInfoParag = `"אי יישום ההסכם למיגור האלימות פירושו הפקרת ביטחונם האישי של האחים והאחיות בתי החולים, בקהילה ובבריאות הציבור. לא נשתוק עוד לאלימות כלפי האנשים שכל 'חטאם' הוא טיפולך באזרחי ישראל", אמרה אילנה כהן יו"ר הסתדרות האחים והאחיות. "אנו ננקוט בכלל האמצעים העומדים לרשותנו עד שמשרד הבריאות יישם באופן  מלא את הסכם מיגור האלימות שנחתם עמנו בשנת 2018. לא ניתן שאף אח ואחות יחוו אלימות בכל צורה שהיא", היא הוסיפה.`;

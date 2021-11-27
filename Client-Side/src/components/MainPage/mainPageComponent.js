@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Element } from "react-scroll";
 import { Grid } from "@material-ui/core";
 
 import About from "../about/aboutComponent";
@@ -48,9 +48,15 @@ function MainPage() {
           style={{ marginTop: "3%" }}
         >
           <Grid xl={7} md={10} xs={12}>
-            {data.map((person) => {
-              return <ArtInfo data={person} />;
-            })}
+            <Element name="ArtInfoElement">
+              {data.map((person, index) => {
+                return (
+                  <div id={index}>
+                    <ArtInfo data={person} />;
+                  </div>
+                );
+              })}
+            </Element>
           </Grid>
         </Grid>
       </Grid>

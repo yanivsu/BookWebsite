@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+
 import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardActions from "@material-ui/core/CardActions";
+import { Button } from "@material-ui/core";
+import GetAppIcon from "@material-ui/icons/GetApp";
 
-import SimpleDialog from "./creationDialogComponent";
+import Game from "./ticTacToeComponent";
 import * as enums from "../../helpers/enums";
 
 const useStyles = makeStyles((theme) => ({
@@ -58,9 +60,13 @@ function Creation() {
         justifyContent="space-between"
         alignItems="center"
       >
+        <Grid container>
+          <Typography variant="h4">דפי צביעה</Typography>
+        </Grid>
+
         {enums.paintPapersLinks.map((paintPaperLink, index) => {
           return (
-            <Grid md={3} className={classes.card}>
+            <Grid md={4} className={classes.card}>
               <Card
                 className={classes.root}
                 style={{ cursor: "pointer" }}
@@ -73,7 +79,6 @@ function Creation() {
                   });
                 }}
               >
-                <CardHeader title="דף צביעה" />
                 <CardMedia
                   className={classes.media}
                   component="img"
@@ -81,15 +86,28 @@ function Creation() {
                   title="Paint"
                 ></CardMedia>
                 <CardActions disableSpacing>
-                  <Grid container justifyContent="center"></Grid>
+                  <Grid container justifyContent="center">
+                    <a
+                      href={paintPaperLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      download
+                    >
+                      <Button>
+                        <GetAppIcon />
+                      </Button>
+                    </a>
+                  </Grid>
                 </CardActions>
               </Card>
             </Grid>
           );
         })}
-
-        <Grid md={12}>
-          <SimpleDialog data={data} />
+        <Grid container style={{ marginTop: "2  %" }}>
+          <Typography variant="h4">איקס - עיגול</Typography>
+        </Grid>
+        <Grid container justifyContent="center">
+          <Game />
         </Grid>
       </Grid>
     </Grid>

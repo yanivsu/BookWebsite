@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Link as Scroll, Element } from "react-scroll";
 
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -56,20 +57,19 @@ export default function AppHeader() {
                 {enums.buttonsText.CREATION}
               </Button>
             </Link>
+
+            <Button className={classes.button} color="secondary">
+              {enums.buttonsText.GALLARY}
+            </Button>
             <Link to="/" style={{ textDecoration: "none" }}>
-              <Button className={classes.button} color="secondary">
-                {enums.buttonsText.GALLARY}
-              </Button>
+              <img className={classes.logo} src={headerIcon} alt="למסך הבית" />
             </Link>
-            <Link to="/" style={{ textDecoration: "none" }}>
-              <img className={classes.logo} src={headerIcon} alt="fireSpot" />
-            </Link>
-            <Link to="/" style={{ textDecoration: "none" }}>
+            <Link to="/BookInfo" style={{ textDecoration: "none" }}>
               <Button className={classes.button} color="secondary">
                 {enums.buttonsText.ABOUT}
               </Button>
             </Link>
-            <Link>
+            <Link to="#" style={{ textDecoration: "none" }}>
               <Button
                 onClick={() => {
                   window.open(enums.buttonsText.BUY_LINK, "_blank"); //to open new page
