@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   button: {
-    border: "3px solid white",
+    border: "3px solid black",
     marginLeft: theme.spacing(4),
     marginRight: theme.spacing(4),
     [theme.breakpoints.down("xs")]: {
@@ -53,19 +53,19 @@ export default function AppHeader() {
             className={classes.web}
           >
             <Link to="/Creation" style={{ textDecoration: "none" }}>
-              <Button className={classes.button} color="secondary">
+              <Button className={classes.button}>
                 {enums.buttonsText.CREATION}
               </Button>
             </Link>
 
-            <Button className={classes.button} color="secondary">
+            <Button className={classes.button}>
               {enums.buttonsText.GALLARY}
             </Button>
             <Link to="/" style={{ textDecoration: "none" }}>
               <img className={classes.logo} src={headerIcon} alt="למסך הבית" />
             </Link>
             <Link to="/BookInfo" style={{ textDecoration: "none" }}>
-              <Button className={classes.button} color="secondary">
+              <Button className={classes.button}>
                 {enums.buttonsText.ABOUT}
               </Button>
             </Link>
@@ -75,7 +75,6 @@ export default function AppHeader() {
                   window.open(enums.buttonsText.BUY_LINK, "_blank"); //to open new page
                 }}
                 className={classes.button}
-                color="secondary"
               >
                 {enums.buttonsText.BUY}
               </Button>

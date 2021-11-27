@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     margin: theme.spacing(2),
   },
+  paper: {
+    backgroundColor: "rgba(0, 0, 0, 0.0)",
+  },
 }));
 
 function BookInfo() {
@@ -53,12 +56,12 @@ function BookInfo() {
       style={{ marginTop: "3%" }}
     >
       <Grid xl={7} md={10} xs={12}>
-        <Paper>
+        <Paper className={classes.paper}>
           <Typography
             variant="h5"
             component="p"
-            color="textSecondary"
             align="center"
+            className={classes.text}
           >
             {enums.bookInfoParag}
           </Typography>

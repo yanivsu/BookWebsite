@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
     transition: "transform 0.15s ease-in-out",
     "&:hover": { transform: "scale3d(1.10, 1.10, 1)" },
-    textAlign: "center",
   },
 
   media: {
@@ -39,6 +38,10 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: "rotate(180deg)",
   },
+
+  card: {
+    minWidth: "385px",
+  },
 }));
 
 function Creation() {
@@ -52,62 +55,62 @@ function Creation() {
       alignItems="center"
       style={{ marginTop: "3%" }}
     >
-      <Grid
-        xl={7}
-        md={10}
-        xs={12}
-        container
-        justifyContent="space-between"
-        alignItems="center"
-      >
+      <Grid xl={7} md={10} xs={12}>
         <Grid container>
           <Typography variant="h4">דפי צביעה</Typography>
         </Grid>
+        <Grid container md={12} justifyContent="center">
+          {enums.paintPapersLinks.map((paintPaperLink, index) => {
+            return (
+              <Grid item className={classes.card}>
+                <Card
+                  className={classes.root}
+                  style={{ cursor: "pointer" }}
+                  key={index}
+                  onClick={(e) => {
+                    console.log(e);
+                    setOpenDialog(true);
+                    setData({
+                      imgLink: paintPaperLink,
+                    });
+                  }}
+                >
+                  <CardMedia
+                    className={classes.media}
+                    component="img"
+                    image={paintPaperLink}
+                    title="Paint"
+                  ></CardMedia>
+                  <CardActions disableSpacing>
+                    <Grid container justifyContent="center">
+                      <a
+                        href={paintPaperLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download
+                      >
+                        <Button>
+                          <GetAppIcon />
+                        </Button>
+                      </a>
+                    </Grid>
+                  </CardActions>
+                </Card>
+              </Grid>
+            );
+          })}
 
-        {enums.paintPapersLinks.map((paintPaperLink, index) => {
-          return (
-            <Grid md={4} className={classes.card}>
-              <Card
-                className={classes.root}
-                style={{ cursor: "pointer" }}
-                key={index}
-                onClick={(e) => {
-                  console.log(e);
-                  setOpenDialog(true);
-                  setData({
-                    imgLink: paintPaperLink,
-                  });
-                }}
-              >
-                <CardMedia
-                  className={classes.media}
-                  component="img"
-                  image={paintPaperLink}
-                  title="Paint"
-                ></CardMedia>
-                <CardActions disableSpacing>
-                  <Grid container justifyContent="center">
-                    <a
-                      href={paintPaperLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      download
-                    >
-                      <Button>
-                        <GetAppIcon />
-                      </Button>
-                    </a>
-                  </Grid>
-                </CardActions>
-              </Card>
-            </Grid>
-          );
-        })}
-        <Grid container style={{ marginTop: "2  %" }}>
+          {/* <Grid container style={{ marginTop: "2  %" }}>
           <Typography variant="h4">איקס - עיגול</Typography>
+        </Grid> */}
+          {/* <Grid container justifyContent="center"> */}
+          {/* <Game /> */}
+          {/* </Grid> */}
         </Grid>
-        <Grid container justifyContent="center">
-          <Game />
+        <Grid style={{ marginTop: "3%" }} container justifyContent="center">
+          <Button color="primary" variant="contained">
+            חומרים נוספים
+          </Button>
         </Grid>
       </Grid>
     </Grid>

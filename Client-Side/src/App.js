@@ -12,7 +12,7 @@ import BookInfo from "./components/bookInfo/bookInfoComponent";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#c1f2cb", // #FFAAA6 - Pink
+      main: "#fbc904", // #FFAAA6 - Pink
     },
     secondary: {
       main: "#FFFFFF",
