@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { createTheme, ThemeProvider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -33,6 +38,7 @@ function App() {
           </Grid>
         </Grid>
         <Routes>
+          <Route path="*" element={<Navigate to="/home" />} />
           <Route exact path="/home" element={<MainPage />} />
           <Route path="/BookWebsite/Creation" element={<Creation />} />
           <Route path="/BookWebsite/BookInfo" element={<BookInfo />} />
