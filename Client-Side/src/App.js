@@ -38,8 +38,8 @@ function App() {
           </Grid>
         </Grid>
         <Routes>
-          <Route path="*" element={<Navigate to="/home" />} />
-          <Route exact path="/home" element={<MainPage />} />
+          <Route path="*" element={<Navigate to="BookWebsite/home" />} />
+          <Route exact path="BookWebsite/home" element={<MainPage />} />
           <Route path="/BookWebsite/Creation" element={<Creation />} />
           <Route path="/BookWebsite/BookInfo" element={<BookInfo />} />
         </Routes>
