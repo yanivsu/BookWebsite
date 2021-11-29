@@ -107,10 +107,54 @@ function Creation() {
           {/* <Game /> */}
           {/* </Grid> */}
         </Grid>
+        <Grid container>
+          <Typography variant="h4">דפי חשיבה ופעילות</Typography>
+        </Grid>
+        <Grid container md={12} justifyContent="center">
+          {enums.thinkPaperLinks.map((paintPaperLink, index) => {
+            return (
+              <Grid item className={classes.card}>
+                <Card
+                  className={classes.root}
+                  style={{ cursor: "pointer" }}
+                  key={index}
+                >
+                  <CardMedia
+                    className={classes.media}
+                    component="img"
+                    image={paintPaperLink.image}
+                    title="Paint"
+                  ></CardMedia>
+                  <CardActions disableSpacing>
+                    <Grid container justifyContent="center">
+                      <a
+                        href={paintPaperLink.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download
+                      >
+                        <Button>
+                          <GetAppIcon />
+                        </Button>
+                      </a>
+                    </Grid>
+                  </CardActions>
+                </Card>
+              </Grid>
+            );
+          })}
+        </Grid>
         <Grid style={{ marginTop: "3%" }} container justifyContent="center">
-          <Button color="primary" variant="contained">
-            חומרים נוספים
-          </Button>
+          <a
+            href={enums.googleDrive}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
+            <Button color="primary" variant="contained">
+              {enums.buttonsText.MORE_STAFF}
+            </Button>
+          </a>
         </Grid>
       </Grid>
     </Grid>

@@ -3,6 +3,10 @@ import Pic2 from "../styles/bookPictures/BookInfo2.png";
 import Pic3 from "../styles/bookPictures/BookInfo3.jpg";
 import Pic4 from "../styles/bookPictures/BookInfo4.png";
 
+import activePic1 from "../styles/activePictures/thinkPageCover.png";
+import activePic2 from "../styles/activePictures/beforeActionCover.png";
+import activePic3 from "../styles/activePictures/afterActionCover.png";
+
 export const buttonsText = {
   BUY: "לרכישה",
   CREATION: "יצירה",
@@ -10,6 +14,7 @@ export const buttonsText = {
   GALLARY: "גלריה",
   BOOKPAGE: "תמונת הספר",
   PROFILEPICTURE: "תמונת פרופיל",
+  MORE_STAFF: "חומרים נוספים",
   BUY_LINK:
     "https://www.meshulam.co.il/purchase?b=25b22fc8b8fc81a9741b428fb65d7c6f",
 };
@@ -17,15 +22,17 @@ export const buttonsText = {
 export const aboutComponentsTexts = {
   TITLE: "הליצן שפחד לרכב על חד-אופן",
   PARAGRAPH:
-    "מי לא אוהב לקבל מתנות ?\n  \n אז מה הוביל את לירן לכעוס כל כך על מתנה שקיבל?\n כיצד פעל ואיך סייעו לו חבריו לתקן את המצב?\n\n הליצן שפחד לרכוב על חד-אופן הוא סיפור על כוחה של חברות, על הכרת הכוחות שבנו ושימושם בתחומים שונים. זהו סיפור על התגברות על פחד - באומץ, בנחישות ובהתמדה.",
+    "מי לא אוהב לקבל מתנות ?\n \n אז מה הוביל את לירן לכעוס כל כך על מתנה שקיבל?\n כיצד פעל ואיך סייעו לו חבריו לתקן את המצב?\n\n הליצן שפחד לרכוב על חד-אופן הוא סיפור על כוחה של חברות, על הכרת הכוחות שבנו ושימושם בתחומים שונים. \n זהו סיפור על התגברות על פחד \n באומץ, בנחישות ובהתמדה.",
 };
 
 export const artInfoTexts = {
   LINOY: "לינוי אסולין",
-  ABOUT_LINOY:
-    "אוהבת לטייל, מילים ופאזלים. היא מנסה לגדל צמחים, מוצאת יופי במתמטיקה ומאמינה גדולה בחינוך ובאנשים.",
+  ABOUT_LINOY: `אוהבת לטייל, מילים ופאזלים. היא מנסה לגדל צמחים, מוצאת יופי במתמטיקה ומאמינה גדולה בחינוך ובאנשים.
+    לינוי מאמינה שבכוחן של המילים הכתובות להעביר מסרים באופן מזוקק ובהיר ולפתוח צוהר אל נפשו של האדם. `,
   NOA: "נועה מושיוב",
-  ABOUT_NOA: `אוהבת ללכת לשון מוקדם, לטייל בטבע, לצייר וללמוד. גם היא אוהבת ממתקים, כלבים, הרפתקאות ומתמטיקה.`,
+  ABOUT_NOA: `אוהבת ללכת לישון מוקדם, לטייל בטבע, לצייר וללמוד. היא גם אוהבת ממתקים, כלבים, פנטזיה, ומתמטיקה. 
+  נועה משלבת טכניקות ידניות ודיגיטאליות ביצירתה. לאחרונה, נהנית במיוחד לצייר בטושים.
+  בעבודת האיור, חשוב לה להציג מגוון רחב וליצור דמויות שיעוררו הזדהות.`,
 };
 
 export const paintPapersLinks = [
@@ -36,8 +43,25 @@ export const paintPapersLinks = [
   "https://lh4.googleusercontent.com/Y8lrDOYH_LNbtOHSVaryWx_Lnbm_6RtBZ6of3cQfukLTjlOZ2nhtY6ZwlTenepogotJZk445myXJTNGXt1xMv6Tdxd1eJYfLErYd9GBkQOwxvQ9iC3EIkRLITqXVfCe9pHARPpJT",
   "https://lh4.googleusercontent.com/xoj_0i50iTXCC9-jezL_Zb3O7vqFpYB4WSmZjaCFLs2e7ZB6dwrF24SIk8bhNDp5Q7ZNGEL80UiLwiXihJ0Fiot9AJFYXKkxL8BKuq0GFPvFbf5XkzeEbXQeNjM9CkcsdLj85dvC",
 ];
+export const thinkPaperLinks = [
+  {
+    image: activePic1,
+    link: "https://drive.google.com/file/d/1GL7zm0DTQJC4IS2rT63K5iOmGGeUazsB/view?usp=sharing",
+  },
+  {
+    image: activePic2,
+    link: "https://drive.google.com/file/d/1uf6hCD8ruGGoCLYbAwD2P-sgtu7qTLWN/view?usp=sharing",
+  },
+  {
+    image: activePic3,
+    link: "https://drive.google.com/file/d/1s9SGm85hbf3Ml3aGesq8ut8FkiEj6abA/view?usp=sharing",
+  },
+];
 
 export const bookPictursLinks = [Pic1, Pic2, Pic3, Pic4];
+
+export const googleDrive =
+  "https://drive.google.com/drive/u/1/folders/1KWR6jUiT89xAPxurQarJnuPTcJpRYfGW";
 
 export const bookInfoParag = `למדתי לרכוב על אופניים בגיל 20. עד כאן, סיפור פשוט יחסית.  רק ש - עבורי זה היה רגע מכונן בהחלט. אני זוכרת את הרגע הזה בדיוק רב, הרגע שבו רגל  אחת מובילה את השנייה וזה קורה, את דפיקות הלב הנרגשות והתחושה שניצחתי.  (כשקיבלתי מנועה המאיירת את עמוד הניצחון של לירן התחושה הכתה בי שוב, כאילו השמש יצאה ממני ברגע הזה, ממש כמו באיור, בלי שום תיאום מוקדם שלנו)
 

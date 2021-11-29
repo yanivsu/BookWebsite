@@ -41,18 +41,13 @@ function MainPage() {
             <About />
           </Grid>
         </Grid>
-        <Grid
-          container
-          justifyContent="center"
-          alignItems="center"
-          style={{ marginTop: "3%" }}
-        >
+        <Grid container justifyContent="center" alignItems="center">
           <Grid xl={7} md={10} xs={12}>
             <Element name="ArtInfoElement">
               {data.map((person, index) => {
                 return (
                   <div id={index}>
-                    <ArtInfo data={person} />;
+                    <ArtInfo data={person} />
                   </div>
                 );
               })}

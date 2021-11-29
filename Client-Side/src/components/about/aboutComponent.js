@@ -11,22 +11,24 @@ import Divider from "@material-ui/core/Divider";
 import Fade from "@material-ui/core/Fade";
 
 import frontBookImg from "../../styles/frontBookImg.jpg";
-import cloudsBackground from "../../styles/sivanBack2.svg";
-// import cloudsBackground from "../../styles/cloudsBackground.svg";
+import cloudsBackground from "../../styles/f.png";
+//import cloudsBackground from "../../styles/cloudsBackground.svg";
 import * as enums from "../../helpers/enums";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundImage: `url(${cloudsBackground})`,
-    backgroundSize: "cover",
+    background: `url(${cloudsBackground}) `,
+
+    backgroundSize: "100% 100%",
     backgroundRepeat: "no-repeat",
+
+    // backgroundAttachment: "fixed",
   },
 
   media: {
-    margin: theme.spacing(2, 5, 2, 2),
-    width: "90%",
-    height: "90%",
-    backgroundSize: "cover",
+    margin: theme.spacing(2, 8, 2, 3),
+    width: "73%",
+    height: "75%",
   },
 
   button: {
@@ -62,23 +64,35 @@ export default function About() {
               title={enums.buttonsText.BOOKPAGE}
             />
           </Grid>
-          <Divider
+          {/* <Divider
             orientation="vertical"
             flexItem
             className={classes.divider}
-          />
-          <Grid container sm={6} direction="row">
+          /> */}
+          <Grid
+            container
+            sm={6}
+            direction="row"
+            style={{ marginLeft: "6%", marginTop: "2%" }}
+          >
             <Grid item>
               <CardContent>
-                <Typography variant="h3" style={{ textAlign: "center" }}>
+                <Typography
+                  variant="h3"
+                  style={{ textAlign: "center", color: "#001222" }}
+                >
                   {enums.aboutComponentsTexts.TITLE}
                 </Typography>
 
                 <Typography
-                  color="textSecondary"
+                  // color="textSecondary"
                   paragraph
                   variant="h5"
-                  style={{ whiteSpace: "pre-line", textAlign: "center" }}
+                  style={{
+                    whiteSpace: "pre-line",
+                    textAlign: "center",
+                    color: "#001222",
+                  }}
                 >
                   {enums.aboutComponentsTexts.PARAGRAPH}
                 </Typography>

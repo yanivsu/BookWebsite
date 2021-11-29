@@ -13,12 +13,7 @@ import * as enums from "../../helpers/enums";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // backgroundImage: `url(${cloudsBackground})`,
-    // backgroundSize: "cover",
-    // backgroundPosition: "1px",
-    // backgroundRepeat: "no-repeat",
-    // marginBottom: "3%",
-
+    marginTop: theme.spacing(5),
     backgroundColor: "rgba(245,245,245,0.3)",
     background: "none",
     border: "30px solid transparent",
