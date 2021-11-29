@@ -33,7 +33,7 @@ function App() {
           </Grid>
         </Grid>
         <Routes>
-          <Route path="/home" element={<MainPage />} />
+          <Route exact path="/home" element={<MainPage />} />
           <Route path="/Creation" element={<Creation />} />
           <Route path="/BookInfo" element={<BookInfo />} />
         </Routes>
