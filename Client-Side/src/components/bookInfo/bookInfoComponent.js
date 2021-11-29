@@ -56,16 +56,6 @@ function BookInfo() {
       style={{ marginTop: "3%" }}
     >
       <Grid xl={7} md={10} xs={12}>
-        <Paper className={classes.paper}>
-          <Typography
-            variant="h5"
-            component="p"
-            align="center"
-            className={classes.text}
-          >
-            {enums.bookInfoParag}
-          </Typography>
-        </Paper>
         <Carousel animation="slide" className={classes.root}>
           {items.map((item, i) => (
             <Grid container justifyContent="center">
@@ -79,6 +69,22 @@ function BookInfo() {
             </Grid>
           ))}
         </Carousel>
+        <Paper className={classes.paper}>
+          <Typography
+            variant="h5"
+            component="p"
+            align="center"
+            style={{
+              whiteSpace: "pre-line",
+            }}
+            className={classes.text}
+          >
+            {enums.bookInfoParag}
+          </Typography>
+        </Paper>
+        <Grid container justifyContent="center">
+          <img src={bookPictures[2]} alt="pictre" className={classes.img} />
+        </Grid>
       </Grid>
     </Grid>
   );
