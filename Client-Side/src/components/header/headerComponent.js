@@ -70,7 +70,7 @@ export default function AppHeader() {
                 {enums.buttonsText.GALLARY}
               </Button>
 
-              <Link to="/" style={{ textDecoration: "none" }}>
+              <Link to="/home" style={{ textDecoration: "none" }}>
                 <img
                   className={classes.logo}
                   src={headerIcon}
