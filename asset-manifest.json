@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/my-app/static/css/main.c6adf287.chunk.css",
+    "main.js": "/my-app/static/js/main.206ff79b.chunk.js",
+    "main.js.map": "/my-app/static/js/main.206ff79b.chunk.js.map",
+    "runtime-main.js": "/my-app/static/js/runtime-main.6f0a8333.js",
+    "runtime-main.js.map": "/my-app/static/js/runtime-main.6f0a8333.js.map",
+    "static/js/2.2a894d44.chunk.js": "/my-app/static/js/2.2a894d44.chunk.js",
+    "static/js/2.2a894d44.chunk.js.map": "/my-app/static/js/2.2a894d44.chunk.js.map",
+    "static/js/3.6db56ec7.chunk.js": "/my-app/static/js/3.6db56ec7.chunk.js",
+    "static/js/3.6db56ec7.chunk.js.map": "/my-app/static/js/3.6db56ec7.chunk.js.map",
+    "index.html": "/my-app/index.html",
+    "static/css/main.c6adf287.chunk.css.map": "/my-app/static/css/main.c6adf287.chunk.css.map",
+    "static/js/2.2a894d44.chunk.js.LICENSE.txt": "/my-app/static/js/2.2a894d44.chunk.js.LICENSE.txt",
+    "static/media/BookInfo1.cfc1b649.jpg": "/my-app/static/media/BookInfo1.cfc1b649.jpg",
+    "static/media/BookInfo2.7fbe63cb.png": "/my-app/static/media/BookInfo2.7fbe63cb.png",
+    "static/media/BookInfo3.93277b8d.jpg": "/my-app/static/media/BookInfo3.93277b8d.jpg",
+    "static/media/BookInfo4.f8af27db.png": "/my-app/static/media/BookInfo4.f8af27db.png",
+    "static/media/NoaProfilePicture.257060d1.jpg": "/my-app/static/media/NoaProfilePicture.257060d1.jpg",
+    "static/media/afterActionCover.9061c4d5.png": "/my-app/static/media/afterActionCover.9061c4d5.png",
+    "static/media/beforeActionCover.9071f72a.png": "/my-app/static/media/beforeActionCover.9071f72a.png",
+    "static/media/index.css": "/my-app/static/media/destello_naranja.aeeab8ad.svg",
+    "static/media/f.d3479c0a.png": "/my-app/static/media/f.d3479c0a.png",
+    "static/media/frontBookImg.8ad94f20.jpg": "/my-app/static/media/frontBookImg.8ad94f20.jpg",
+    "static/media/headerIcon.555eb45d.png": "/my-app/static/media/headerIcon.555eb45d.png",
+    "static/media/profilePicture.9b8a1fe4.jpg": "/my-app/static/media/profilePicture.9b8a1fe4.jpg",
+    "static/media/thinkPageCover.f8f2a8d5.png": "/my-app/static/media/thinkPageCover.f8f2a8d5.png",
+    "static/media/zooframe.9603a305.svg": "/my-app/static/media/zooframe.9603a305.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f0a8333.js",
+    "static/js/2.2a894d44.chunk.js",
+    "static/css/main.c6adf287.chunk.css",
+    "static/js/main.206ff79b.chunk.js"
+  ]
+}
