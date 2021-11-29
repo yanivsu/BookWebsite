@@ -60,7 +60,10 @@ export default function AppHeader() {
         <Grid container md={12}>
           <Grid container justifyContent="center" className={classes.toolBar}>
             <Toolbar>
-              <Link to="/Creation" style={{ textDecoration: "none" }}>
+              <Link
+                to="/BookWebsite/Creation"
+                style={{ textDecoration: "none" }}
+              >
                 <Button className={classes.button}>
                   {enums.buttonsText.CREATION}
                 </Button>
@@ -70,7 +73,7 @@ export default function AppHeader() {
                 {enums.buttonsText.GALLARY}
               </Button>
 
-              <Link to="/home" style={{ textDecoration: "none" }}>
+              <Link to="/BookWebsite/home" style={{ textDecoration: "none" }}>
                 <img
                   className={classes.logo}
                   src={headerIcon}
@@ -78,7 +81,10 @@ export default function AppHeader() {
                 />
               </Link>
 
-              <Link to="/BookInfo" style={{ textDecoration: "none" }}>
+              <Link
+                to="/BookWebsite/BookInfo"
+                style={{ textDecoration: "none" }}
+              >
                 <Button className={classes.button}>
                   {enums.buttonsText.ABOUT}
                 </Button>

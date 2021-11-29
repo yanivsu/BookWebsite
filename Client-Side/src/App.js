@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -34,8 +34,8 @@ function App() {
         </Grid>
         <Routes>
           <Route exact path="/BookWebsite/home" element={<MainPage />} />
-          <Route path="/Creation" element={<Creation />} />
-          <Route path="/BookInfo" element={<BookInfo />} />
+          <Route path="/BookWebsite/Creation" element={<Creation />} />
+          <Route path="/BookWebsite/BookInfo" element={<BookInfo />} />
         </Routes>
       </Router>
     </ThemeProvider>
