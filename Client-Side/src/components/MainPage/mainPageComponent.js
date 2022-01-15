@@ -1,5 +1,7 @@
 import React from "react";
 import { Element } from "react-scroll";
+
+import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 
 import About from "../about/aboutComponent";
@@ -26,8 +28,10 @@ const noasData = {
   rightSide: false,
 };
 
+const useStyles = makeStyles((theme) => {});
 function MainPage() {
   const data = [linoysData, noasData];
+  const classes = useStyles();
   return (
     <Grid>
       <Grid>
@@ -47,7 +51,7 @@ function MainPage() {
               {data.map((person, index) => {
                 return (
                   <div id={index}>
-                    <ArtInfo data={person} />
+                    <ArtInfo data={person} className={classes.biggerDisplay} />
                   </div>
                 );
               })}

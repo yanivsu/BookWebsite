@@ -23,7 +23,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mediaRight: {
-    margin: theme.spacing(2),
+    [theme.breakpoints.up("md")]: {
+      margin: theme.spacing(2),
+    },
     width: "100%",
     height: "100%",
     backgroundSize: "cover",

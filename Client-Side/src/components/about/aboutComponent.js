@@ -17,16 +17,27 @@ import * as enums from "../../helpers/enums";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: `url(${cloudsBackground}) `,
-
-    backgroundSize: "100% 100%",
-    backgroundRepeat: "no-repeat",
+    [theme.breakpoints.up("sm")]: {
+      background: `url(${cloudsBackground}) `,
+      backgroundSize: "100% 100%",
+      backgroundRepeat: "no-repeat",
+    },
+    [theme.breakpoints.down("sm")]: {
+      background: `none`,
+    },
 
     // backgroundAttachment: "fixed",
   },
 
   media: {
-    margin: theme.spacing(2, 8, 2, 3),
+    [theme.breakpoints.down("md")]: {
+      background: `url(${cloudsBackground}) `,
+      margin: "auto auto ",
+      marginTop: "5%",
+    },
+    [theme.breakpoints.up("md")]: {
+      margin: theme.spacing(2, 8, 2, 3),
+    },
     width: "73%",
     height: "75%",
   },
@@ -64,11 +75,7 @@ export default function About() {
               title={enums.buttonsText.BOOKPAGE}
             />
           </Grid>
-          {/* <Divider
-            orientation="vertical"
-            flexItem
-            className={classes.divider}
-          /> */}
+
           <Grid
             container
             sm={6}

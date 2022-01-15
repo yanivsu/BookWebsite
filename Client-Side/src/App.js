@@ -13,6 +13,7 @@ import AppHeader from "./components/header/headerComponent";
 import MainPage from "./components/MainPage/mainPageComponent";
 import Creation from "./components/creation/creationComponent";
 import BookInfo from "./components/bookInfo/bookInfoComponent";
+import Footer from "./components/footer/footerComponent";
 
 const theme = createTheme({
   palette: {
@@ -28,7 +29,13 @@ const theme = createTheme({
   },
 });
 
+const useStyles = makeStyles((theme) => ({
+  footer: { height: "1000px" },
+}));
+
 function App() {
+  const classes = useStyles();
+
   return (
     <ThemeProvider theme={theme}>
       <Router>
@@ -44,6 +51,7 @@ function App() {
           <Route path="/BookWebsite/BookInfo" element={<BookInfo />} />
         </Routes>
       </Router>
+      <Footer classes={classes.footer} />
     </ThemeProvider>
   );
 }

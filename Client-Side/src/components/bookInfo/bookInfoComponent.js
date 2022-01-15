@@ -18,7 +18,11 @@ const useStyles = makeStyles((theme) => ({
   img: {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    margin: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      margin: theme.spacing(2),
+      // display: "none",
+    },
+    width: "100%",
   },
   paper: {
     backgroundColor: "rgba(0, 0, 0, 0.0)",
