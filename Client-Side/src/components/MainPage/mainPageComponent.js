@@ -9,7 +9,7 @@ import ArtInfo from "../art/artInfoComponent";
 import AppHeader from "../header/headerComponent";
 import * as enums from "../../helpers/enums";
 
-import linoysProfilePicture from "../../styles/profilePicture.jpg";
+import linoysProfilePicture from "../../styles/linoyProfilePicture.jpeg";
 import noasProfilePicture from "../../styles/NoaProfilePicture.jpg";
 
 const linoysData = {

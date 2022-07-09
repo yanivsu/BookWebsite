@@ -14,6 +14,7 @@ import MainPage from "./components/MainPage/mainPageComponent";
 import Creation from "./components/creation/creationComponent";
 import BookInfo from "./components/bookInfo/bookInfoComponent";
 import Footer from "./components/footer/footerComponent";
+import ReviewCarousel from "./components/reviewCarousel/reviewCarouselComponent";
 
 const theme = createTheme({
   palette: {
@@ -25,7 +26,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Secular One", "sans-serif"].join(","),
+    fontFamily: ["Open Sans", "sans-serif"].join(","),
   },
 });
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/BookWebsite/BookInfo" element={<BookInfo />} />
         </Routes>
       </Router>
+      <ReviewCarousel />
       <Footer classes={classes.footer} />
     </ThemeProvider>
   );

@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme) => ({
     height: "50px",
   },
   newFont: {
-    fontFamily: ["Segoe UI"].join(","),
+    fontFamily: ["Open sans"].join(","),
+    fontWeight: "bold",
   },
 }));
 function Footer() {

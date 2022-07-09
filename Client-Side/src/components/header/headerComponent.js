@@ -102,11 +102,11 @@ export default function AppHeader() {
               </Link>
 
               <Link
-                to="/BookWebsite/Creation"
+                to="/BookWebsite/BookInfo"
                 style={{ textDecoration: "none" }}
               >
                 <Button className={classes.button}>
-                  {enums.buttonsText.CREATION}
+                  {enums.buttonsText.ABOUT}
                 </Button>
               </Link>
 
@@ -119,11 +119,11 @@ export default function AppHeader() {
               </Link>
 
               <Link
-                to="/BookWebsite/BookInfo"
+                to="/BookWebsite/Creation"
                 style={{ textDecoration: "none" }}
               >
                 <Button className={classes.button}>
-                  {enums.buttonsText.ABOUT}
+                  {enums.buttonsText.CREATION}
                 </Button>
               </Link>
               <Link to="#" style={{ textDecoration: "none" }}>

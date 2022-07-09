@@ -53,6 +53,18 @@ const useStyles = makeStyles((theme) => ({
     width: "5px",
     backgroundColor: "#ac1917",
   },
+  box: {
+    [theme.breakpoints.up("md")]: {
+      marginLeft: "-38px",
+      marginBottom: "-35px",
+    },
+  },
+  buyButton: {
+    justifyContent: "center",
+    [theme.breakpoints.up("md")]: {
+      justifyContent: "flex-end",
+    },
+  },
 }));
 
 export default function About() {
@@ -83,12 +95,16 @@ export default function About() {
             style={{ marginLeft: "6%", marginTop: "2%" }}
           >
             <Grid item>
-              <CardContent>
+              <CardContent className={classes.cardContent}>
                 <Typography
                   variant="h3"
-                  style={{ textAlign: "center", color: "#001222" }}
+                  style={{
+                    textAlign: "center",
+                    color: "#001222",
+                    fontWeight: "bold",
+                  }}
                 >
-                  {enums.aboutComponentsTexts.TITLE}
+                  <Box lineHeight={2}>{enums.aboutComponentsTexts.TITLE}</Box>
                 </Typography>
 
                 <Typography
@@ -99,14 +115,16 @@ export default function About() {
                     whiteSpace: "pre-line",
                     textAlign: "center",
                     color: "#001222",
+                    fontFamily: "Open Sans",
+                    fontWeight: "bold",
                   }}
                 >
                   {enums.aboutComponentsTexts.PARAGRAPH}
                 </Typography>
               </CardContent>
             </Grid>
-            <Grid container justifyContent="center" alignItems="center">
-              <Box>
+            <Grid container className={classes.buyButton}>
+              <Box className={classes.box}>
                 <Button
                   className={classes.button}
                   color="primary"

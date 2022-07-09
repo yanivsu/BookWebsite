@@ -14,7 +14,7 @@ const theme = createMuiTheme({
       button: "#266798",
     },
     text: {
-      primary: "#E0E0E0",
+      primary: "#000000",
       secondary: "white",
       fontSize: 14,
     },
