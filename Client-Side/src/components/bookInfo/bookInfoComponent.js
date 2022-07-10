@@ -99,9 +99,9 @@ function BookInfo() {
             </Typography>
           </Paper>
         </Grid>
-        <Grid container justifyContent="center">
+        {/* <Grid container justifyContent="center">
           <img src={bookPictures[2]} alt="pictre" className={classes.img} />
-        </Grid>
+        </Grid> */}
       </Grid>
     </Grid>
   );

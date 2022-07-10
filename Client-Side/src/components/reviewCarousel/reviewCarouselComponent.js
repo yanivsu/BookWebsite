@@ -1,5 +1,7 @@
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
+import * as enums from "../../helpers/enums";
+
 import Carousel from "react-material-ui-carousel";
 import byc from "../../styles/byc.png";
 
@@ -8,8 +10,18 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   img: {
-    margin: theme.spacing(5),
-    maxWidth: "50px",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+    [theme.breakpoints.up("sm")]: {
+      margin: theme.spacing(5),
+      maxWidth: "50px",
+    },
+  },
+  reviews: {
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
   },
 }));
 var items = [
@@ -79,7 +91,18 @@ function ReviewCarousel() {
       style={{ marginTop: "3%" }}
     >
       <img src={byc} className={classes.img} />
-      <Grid xl={3} md={10} xs={12}>
+      <Grid xl={3} md={8} xs={12}>
+        <Typography
+          className={classes.reviews}
+          style={{
+            textAlign: "center",
+            color: "white",
+            textDecorationLine: "underline",
+          }}
+          variant="h5"
+        >
+          {enums.strings.REVIEWS}
+        </Typography>
         <Carousel animation="slide">
           {items.map((item, i) => (
             <Grid
@@ -102,6 +125,7 @@ function ReviewCarousel() {
           ))}
         </Carousel>
       </Grid>
+
       <img src={byc} className={classes.img} />
     </Grid>
   );

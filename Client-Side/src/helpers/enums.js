@@ -20,6 +20,9 @@ export const buttonsText = {
   BUY_LINK:
     "https://www.meshulam.co.il/purchase?b=25b22fc8b8fc81a9741b428fb65d7c6f",
 };
+export const strings = {
+  REVIEWS: "ביקורות:",
+};
 
 export const aboutComponentsTexts = {
   TITLE: "הליצן שפחד לרכב על חד-אופן",
