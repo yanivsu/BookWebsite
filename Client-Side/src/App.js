@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
-
+  console.log("coomit");
   return (
     <ThemeProvider theme={theme}>
       <Router>
